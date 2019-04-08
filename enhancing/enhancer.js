@@ -5,44 +5,43 @@ module.exports = {
   // get,
 };
 
-function succeed(item, enhancement) {
-  if (!item) item = 'sword'
-  if (!enhancement) enhancement=12
-  item = {
-    item:item,
-    durability:100,
-    enhancement:enhancement
-  }
-  if (item.enhancement > 10 && item.enhancement < 21) return { ...item };
-  return false;
-}
-
-function fail(item, enhancement) {
-  if (!item) item = 'sword'
-  if (!enhancement) enhancement=9
-  item = {
-    item:item,
-    durability:100,
-    enhancement:enhancement
-  }
-  if (item.enhancement >= 0 && item.enhancement < 11) return { ...item };
-  return false;
-}
-
-
 function repair(item) {
-  if (!item) item = 'sword'
+  // if (!item) item = 'sword'
   item = {
-    item:item,
-    durability:100,
-    enhancement:0
+    ...item,
+    durability:100
   }
   return { ...item };
 }
+
+function succeed(item) {
+  // if (!item) item = 'sword'
+  // if (!enhancement) enhancement=12
+  if (item.enhancement >= 20) return { ...item }
+  item = {
+    ...item,
+    enhancement: item.enhancement+1
+  }
+  return { ...item }
+}
+
+function fail(item) {
+  if (item.enhancement >= 20) return { ...item }
+  item = {
+    ...item,
+    enhancement: item.enhancement-1
+  }
+  return { ...item }
+}
+
+
 
 // function get(item) {
 //   return { ...item };
 // }
 
 // console.log(repair('sword'))
-console.log(fail('sword'))
+// console.log(fail('sword'))
+
+
+
