@@ -2,10 +2,14 @@
   "name": "webtesting-i-challenge",
   "version": "1.0.0",
   "main": "index.js",
+  "scripts": {
+    "test": "jest --watch"
+  },
   "repository": "git@github.com:LeTanque/webtesting-i-challenge.git",
   "author": "Frank Martinez <frankie.martinez@gmail.com>",
   "license": "MIT",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "jest": "^24.7.1"
   }
 }
