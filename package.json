@@ -1,0 +1,11 @@
+{
+  "name": "webtesting-i-challenge",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:LeTanque/webtesting-i-challenge.git",
+  "author": "Frank Martinez <frankie.martinez@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "jest": "^24.7.1"
+  }
+}
