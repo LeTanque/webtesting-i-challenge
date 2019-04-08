@@ -21,7 +21,10 @@ describe('enhancer()', () => {
     });
 
     it('fail(item) enhancement that fails', () => {
-        expect(fail(sword).enhancement).toBeLessThan(sword.enhancement)
+        expect(fail(sword).durability).toBeLessThan(sword.durability - 4)
+        if (sword.enhancement > 16) {
+            expect(fail(sword).enhancement).toBe(sword.enhancement - 1)
+        }
     });
 
     it.todo('get()');
